@@ -1,0 +1,11 @@
+config HID_NTRIG_G4
+	tristate "N-Trig g4 touch screen"
+	depends on USB_HID
+	---help---
+	Support for N-Trig g4 touch screen.
+
+config NTRIG_SPI_G4
+	tristate "NTrig"
+	---help---
+	Support for N-Trig g4 touch screen spi
+

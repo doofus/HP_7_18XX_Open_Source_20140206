@@ -1,0 +1,25 @@
+This file is used to run the test code for test.
+
+kernel parameter list:
+
+kernel /boot/bzImage pci=noearly console=tty0 reboot=bios loglevel=1 androidboot.bootmedia=harddisk androidboot.hardware=springhill s0ix_latency=160 vmalloc=256M subarch=13 video=1024x600 tddriver.isminios=n tddriver.ismanufact=n tddriver.bc_expired=0 tddriver.istdsupported=y
+
+tddriver.isminios=[y]n] indicate if this OS is minios
+                        it is a bool parameter,
+                        0|n|N for true,
+                        1|y|Y for false
+
+tddriver.ismanufact=    indicate if is in manufacture mode.
+                        bool type.
+                        if it is in manufacture mode, The NV will not be locked.
+
+tddriver.bc_expired=    indicate if BC is expired.
+                        int type.
+                        -1 for TPM error when test if BC is locked
+                        0, it is not expired.
+                        1, it is expired.
+
+tddriver.istdsupported= indicate if td supported.
+                        bool type.
+                        0|n|N for not supported.
+                        1|y|Y for supported.
